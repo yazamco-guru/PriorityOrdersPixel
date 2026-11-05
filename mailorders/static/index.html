@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הזמנות ממייל</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>הזמנות ממייל ← פריוריטי</h1>
+    <div class="pills">
+      <span id="pillGmail" class="pill">Gmail</span>
+      <span id="pillPriority" class="pill">פריוריטי</span>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="btnPoll">בדוק מיילים עכשיו</button>
+    <label class="btn">העלאת PDF<input id="fileInput" type="file" accept="application/pdf" multiple hidden></label>
+    <button id="btnRefresh">רענון נתוני פריוריטי</button>
+  </div>
+</header>
+
+<main>
+  <nav class="tabs" id="tabs"></nav>
+
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="חיפוש לפי שולח, לקוח, מס' הזמנה…">
+    <button id="btnSendSel" class="primary" disabled>שלח מסומנות לפריוריטי</button>
+  </div>
+
+  <table class="grid">
+    <thead>
+      <tr>
+        <th class="chk"><input type="checkbox" id="chkAll"></th>
+        <th>התקבל</th>
+        <th>שולח</th>
+        <th>קובץ</th>
+        <th>לקוח בפריוריטי</th>
+        <th>מס' הזמנה</th>
+        <th>שורות</th>
+        <th>סטטוס</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p id="empty" class="empty" hidden>אין הזמנות להצגה</p>
+</main>
+
+<div id="detail" class="overlay" hidden>
+  <div class="panel">
+    <div class="panel-head">
+      <h2 id="dTitle"></h2>
+      <button class="ghost" data-close>✕</button>
+    </div>
+    <div class="panel-body">
+      <section class="form" id="dForm"></section>
+      <section class="pdf"><iframe id="dPdf" title="PDF"></iframe></section>
+    </div>
+    <div class="panel-foot" id="dFoot"></div>
+  </div>
+</div>
+
+<div id="picker" class="overlay small" hidden>
+  <div class="panel">
+    <div class="panel-head">
+      <h2 id="pTitle"></h2>
+      <button class="ghost" data-close>✕</button>
+    </div>
+    <div class="picker-body">
+      <input id="pSearch" type="search" placeholder="הקלידי שם, מק&quot;ט או ברקוד…">
+      <ul id="pList" class="results"></ul>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

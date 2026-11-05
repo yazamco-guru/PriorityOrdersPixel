@@ -1,0 +1,38 @@
+{
+  "port": 8790,
+  "gmail": {
+    "user": "orders.example@gmail.com",
+    "appPassword": "",
+    "folder": "INBOX",
+    "pollMinutes": 5,
+    "sinceDays": 14,
+    "filter": ""
+  },
+  "priority": {
+    "baseUrl": "https://SERVER/odata/Priority/tabula.ini/COMPANY/",
+    "user": "",
+    "password": "",
+    "appId": "",
+    "appKey": ""
+  },
+  "anthropic": {
+    "apiKey": "",
+    "model": "claude-sonnet-5-5"
+  },
+  "orders": {
+    "typeCode": "",
+    "dueDays": 0,
+    "priceField": "PRICE",
+    "attachPdf": true
+  },
+  "ownCompany": {
+    "names": [],
+    "vatnums": []
+  },
+  "matching": {
+    "partThreshold": 0.85,
+    "partMargin": 0.15,
+    "customerThreshold": 0.8,
+    "customerMargin": 0.1
+  }
+}
